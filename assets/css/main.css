@@ -4115,3 +4115,37 @@ input, select, textarea {
 		body.single-toggle .drop:nth-child(10) {
 		display: block;
 		}
+
+/* Flash */
+
+/* Container for the lightning flash */
+.lightning-flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    opacity: 0;
+    z-index: 10;
+    pointer-events: none;
+    transition: opacity 0.1s ease-in-out;
+}
+
+/* Shake animation */
+@keyframes shake {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate(-5px, 5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translate(5px, -5px);
+    }
+}
+
+/* Apply the shake effect to the body when active */
+body.shake {
+    animation: shake 0.3s linear;
+}
