@@ -12,11 +12,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="assets/js/rain.js"></script>
 	</head>
 	<body class="landing is-preload">
 
 		<!-- Page Wrapper -->
-
+		<div class="rain front-row"></div>
+		<div class="rain back-row"></div>
 			<div id="page-wrapper">
 
 				<!-- Header -->
@@ -92,10 +95,7 @@
 						</ul>
 					</footer>
 
-			</div>
-			<div class="rain back-row"></div>
-			<div class="back-row-toggle toggle active">Rain</div>
-			</div>
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -104,7 +104,12 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/rain.js"></script>
 
 	</body>
+	<script>
+
+$(document).ready(function() {
+  makeItRain();
+});
+	</script>
 </html>

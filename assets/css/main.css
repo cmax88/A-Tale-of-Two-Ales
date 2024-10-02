@@ -4021,7 +4021,7 @@ input, select, textarea {
 		z-index: 1;
 		bottom: 100px;
 		opacity: 1;
-		height: 100%;
+		height: 70%;
 		}
 		
 		body.back-row-toggle .rain.back-row {
@@ -4051,10 +4051,10 @@ input, select, textarea {
 		
 		.stem {
 		position:fixed;
-		width: 1px;
+		width: 1.5px;
 		height: 100%;
 		margin-left: 1px;
-		background: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 255, 255, 0.37));
+		background: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgb(255, 217, 0));
 		animation: stem 0.5s linear infinite;
 		}
 		
@@ -4106,57 +4106,6 @@ input, select, textarea {
 			opacity: 0;
 			transform: scale(2);
 		}
-		}
-		
-		.toggles {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 3;
-		}
-		
-		.toggle {
-		position: absolute;
-		left: 20px;
-		width: 50px;
-		height: 50px;
-		line-height: 35px;
-		box-sizing: border-box;
-		text-align: center;
-		font-family: "Unbounded", sans-serif;
-		font-size: 10pt;
-		font-weight: bold;
-		background-color: rgba(255, 255, 255, 0.2);
-		color: rgba(0, 0, 0, 0.5);
-		border-radius: 50%;
-		cursor: pointer;
-		transition: background-color 0.3s;
-		}
-		
-		.toggle:hover {
-		background-color: rgba(255, 255, 255, 0.25);
-		}
-		
-		.toggle:active {
-		background-color: rgba(255, 255, 255, 0.3);
-		}
-		
-		.toggle.active {
-		background-color: rgba(255, 255, 255, 0.4);
-		}
-		
-		.splat-toggle {
-		top: 20px;
-		}
-		
-		.back-row-toggle {
-		top: 100px;
-		line-height: 35px;
-		padding-top: 0px;
-		}
-		
-		.single-toggle {
-		top: 160px;
 		}
 		
 		body.single-toggle .drop {
