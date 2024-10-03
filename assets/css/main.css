@@ -2661,40 +2661,6 @@ input, select, textarea {
 
 			}
 
-/* Spotlight */
-
-/* Spotlight effect for paragraphs with the 'spotlight' class */
-.spotlight {
-    position: relative; /* Establishes a positioning context for pseudo-elements */
-    background-color: black; /* Sets the background to black */
-    color: white; /* Changes text color to white for contrast */
-    padding: 20px; /* Adds padding around the text */
-    border-radius: 40px; /* Rounds the corners for a softer look */
-    transition: background-color 1s ease, box-shadow 1s ease; /* Smooth transitions */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Soft white glow */
-    margin: 20px 0; /* Adds vertical spacing */
-}
-
-/* Optional: Adds a radial gradient overlay for a more pronounced spotlight */
-.spotlight::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 80%);
-    z-index: -1; /* Places the gradient behind the paragraph */
-    border-radius: 10px; /* Matches the parent border radius */
-    transition: opacity 1s ease; /* Smooth fade-in effect */
-    opacity: 1; /* Fully visible by default */
-}
-
-/* Optional: Add hover effect to enhance interactivity */
-.spotlight:hover::before {
-    opacity: 1; /* Maintains visibility on hover */
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7); /* Intensifies the glow */
-}
 
 
 /* Wrapper */
