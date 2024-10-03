@@ -90,7 +90,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #e6d08a;
+		background: #2b3328;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2663,130 +2663,39 @@ input, select, textarea {
 
 /* Spotlight */
 
-	.spotlight {
-		-moz-align-items: center;
-		-webkit-align-items: center;
-		-ms-align-items: center;
-		align-items: center;
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-	}
+/* Spotlight effect for paragraphs with the 'spotlight' class */
+.spotlight {
+    position: relative; /* Establishes a positioning context for pseudo-elements */
+    background-color: black; /* Sets the background to black */
+    color: white; /* Changes text color to white for contrast */
+    padding: 20px; /* Adds padding around the text */
+    border-radius: 40px; /* Rounds the corners for a softer look */
+    transition: background-color 1s ease, box-shadow 1s ease; /* Smooth transitions */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Soft white glow */
+    margin: 20px 0; /* Adds vertical spacing */
+}
 
-		.spotlight .image {
-			-moz-order: 1;
-			-webkit-order: 1;
-			-ms-order: 1;
-			order: 1;
-			border-radius: 0;
-			width: 40%;
-		}
+/* Optional: Adds a radial gradient overlay for a more pronounced spotlight */
+.spotlight::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 80%);
+    z-index: -1; /* Places the gradient behind the paragraph */
+    border-radius: 10px; /* Matches the parent border radius */
+    transition: opacity 1s ease; /* Smooth fade-in effect */
+    opacity: 1; /* Fully visible by default */
+}
 
-			.spotlight .image img {
-				border-radius: 0;
-				width: 100%;
-			}
+/* Optional: Add hover effect to enhance interactivity */
+.spotlight:hover::before {
+    opacity: 1; /* Maintains visibility on hover */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7); /* Intensifies the glow */
+}
 
-		.spotlight .content {
-			padding: 2em 4em 0.1em 4em ;
-			-moz-order: 2;
-			-webkit-order: 2;
-			-ms-order: 2;
-			order: 2;
-			max-width: 48em;
-			width: 60%;
-		}
-
-		.spotlight:nth-child(2n) {
-			-moz-flex-direction: row-reverse;
-			-webkit-flex-direction: row-reverse;
-			-ms-flex-direction: row-reverse;
-			flex-direction: row-reverse;
-		}
-
-		.spotlight:nth-child(1) {
-			background-color: rgba(0, 0, 0, 0.075);
-		}
-
-		.spotlight:nth-child(2) {
-			background-color: rgba(0, 0, 0, 0.15);
-		}
-
-		.spotlight:nth-child(3) {
-			background-color: rgba(0, 0, 0, 0.225);
-		}
-
-		.spotlight:nth-child(4) {
-			background-color: rgba(0, 0, 0, 0.3);
-		}
-
-		.spotlight:nth-child(5) {
-			background-color: rgba(0, 0, 0, 0.375);
-		}
-
-		.spotlight:nth-child(6) {
-			background-color: rgba(0, 0, 0, 0.45);
-		}
-
-		.spotlight:nth-child(7) {
-			background-color: rgba(0, 0, 0, 0.525);
-		}
-
-		.spotlight:nth-child(8) {
-			background-color: rgba(0, 0, 0, 0.6);
-		}
-
-		.spotlight:nth-child(9) {
-			background-color: rgba(0, 0, 0, 0.675);
-		}
-
-		.spotlight:nth-child(10) {
-			background-color: rgba(0, 0, 0, 0.75);
-		}
-
-		@media screen and (max-width: 1280px) {
-
-			.spotlight .image {
-				width: 45%;
-			}
-
-			.spotlight .content {
-				width: 55%;
-			}
-
-		}
-
-		@media screen and (max-width: 980px) {
-
-			.spotlight {
-				display: block;
-			}
-
-				.spotlight br {
-					display: none;
-				}
-
-				.spotlight .image {
-					width: 100%;
-				}
-
-				.spotlight .content {
-					padding: 4em 3em 2em 3em ;
-					max-width: none;
-					text-align: center;
-					width: 100%;
-				}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			.spotlight .content {
-				padding: 3em 2em 1em 2em ;
-			}
-
-		}
 
 /* Wrapper */
 
@@ -3886,10 +3795,58 @@ input, select, textarea {
 		background-attachment: scroll;
 	}
 
+/* Bottom Arrow */
+#bottom-arrow .more {
+    /* Reuse the existing .more styles */
+    -moz-transition: -moz-transform 0.75s ease, opacity 0.75s ease;
+    -webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease;
+    -ms-transition: -ms-transform 0.75s ease, opacity 0.75s ease;
+    transition: transform 0.75s ease, opacity 0.75s ease;
+    -moz-transition-delay: 3.5s;
+    -webkit-transition-delay: 3.5s;
+    -ms-transition-delay: 3.5s;
+    transition-delay: 3.5s;
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    border: none;
+    /* Position at the bottom of the viewport */
+    position: sticky;
+    color: #807b62;
+    font-size: 0.8em;
+    height: 8.5em;
+    letter-spacing: 0.225em;
+    opacity: 1;
+    outline: 0;
+    padding-left: 0.225em;
+    text-align: center;
+    text-transform: uppercase;
+    width: 16em;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+#bottom-arrow .more:after {
+    background-image: url("images/arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -3em; /* Invert the arrow direction if needed */
+    content: '';
+    display: block;
+    height: 1.5em;
+    left: 50%;
+    margin: 0 0 0 -0.75em;
+    position: absolute;
+    width: 1.5em;
+    transform: rotate(180deg); /* Flip the arrow to point upwards */
+}
+
+
 /* Footer */
 
 	#footer {
-		padding: 6em 0 4em 0 ;
+		padding: 3em 0 1em 0 ;
 		background-color: #000000;
 		text-align: center;
 	}

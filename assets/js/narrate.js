@@ -1,3 +1,5 @@
+// narrate.js
+
 let currentAudio = null;  // To keep track of the currently playing paragraph audio
 let songAudio = null;     // To keep track of the song audio
 
@@ -21,18 +23,26 @@ function playAudio(audioSrc) {
     }
 }
 
-// Function to highlight and play audio for paragraphs
+// Function to highlight and narrate paragraphs, including spotlight effect
 function highlightAndNarrate() {
     const paragraphs = document.querySelectorAll('#story p');
 
     paragraphs.forEach(paragraph => {
         if (isInViewport(paragraph)) {
             if (!paragraph.classList.contains('active')) {
-                // Remove active class from other paragraphs
-                document.querySelectorAll('#story p').forEach(p => p.classList.remove('active'));
+                // Remove 'active' and 'spotlight' classes from all paragraphs
+                paragraphs.forEach(p => {
+                    p.classList.remove('active');
+                    p.classList.remove('spotlight');
+                });
 
                 // Highlight the current paragraph
                 paragraph.classList.add('active');
+
+                // If the paragraph contains an <em> tag, add 'spotlight' class
+                if (paragraph.querySelector('em')) {
+                    paragraph.classList.add('spotlight');
+                }
 
                 // Play the associated paragraph audio
                 const audioSrc = paragraph.getAttribute('data-audio');
@@ -68,4 +78,4 @@ function highlightAndNarrate() {
 window.addEventListener('scroll', highlightAndNarrate);
 
 // Initial check when page loads
-highlightAndNarrate();
+document.addEventListener('DOMContentLoaded', highlightAndNarrate);
