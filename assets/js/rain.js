@@ -22,3 +22,7 @@ var makeItRain = function() {
   $('.rain.front-row').append(drops);
   $('.rain.back-row').append(backDrops);
 }
+
+$(document).ready(function() {
+  makeItRain();
+});

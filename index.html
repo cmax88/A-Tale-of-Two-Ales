@@ -12,10 +12,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="assets/js/rain.js"></script>
 	</head>
 	<body class="landing is-preload">
+		<audio id="rain-sound" src="sounds/rain.mp3" preload="auto" loop></audio>
+		<audio id="lightning-1" src="sounds/lightning-1.mp3" preload="auto"></audio>
+		<audio id="lightning-2" src="sounds/lightning-2.mp3" preload="auto"></audio>
+		<audio id="lightning-3" src="sounds/lightning-3.mp3" preload="auto"></audio>
+		<audio id="lightning-4" src="sounds/lightning-4.mp3" preload="auto"></audio>
 
 		<!-- Page Wrapper -->
 		<div class="lightning-flash"></div>
@@ -31,7 +34,7 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<h2>A Tale of Two Ales</h2>
+							<h2></span>A Tale of Two Ales</h2>
 							<p>A wondrous and sooth tale of<br />
 							<b>steadfastness and valor</b>.</p>
 						</div>
@@ -46,7 +49,7 @@
 								<p><em>This tale is neither mine to recount nor my duty to retell; rather, it is but a humble service I graciously bestow upon thee for thy listening delight.</em></p>
 								<br>
 								<h2>The Retelling</h2>
-								<p>In the days of antiquity, when the air was sweet with the scent of blossoming ideas and the world was cloaked in a veil of wonder, I, <a href="https://www.linkedin.com/in/connor-maxwell-212184273/">Connor</a>, did find myself seated within the venerable walls of Web Communications. The chamber was aglow with the soft light of candles, their flames dancing to the silent music of thought. Around me gathered were my esteemed companions: <a href = "https://www.linkedin.com/in/tim-holtz-83085a258/">Tim</a>, whose intellect shone brighter than the morning star; <a href="https://www.douglas-maxwell.com/">Douglas</a>, a sage whose wisdom flowed like a deep river; <a href="https://www.lukemcelligott.com/">Luke</a>, ever the jovial spirit whose laughter could stir even the sternest soul; <a href="https://www.linkedin.com/in/liam-mcelligott/">Liam</a>, a seeker of truths hidden beneath layers of enigma; <a href="https://www.linkedin.com/in/cameron-mcfeely-152086254/">Cameron</a>, a weaver of tales spun from the finest threads of imagination; and <a href="https://chasewickerham.com/">Chase</a>, whose adventurous heart knew no boundaries.</p> 
+								<p>In the days of antiquity, when the air was sweet with the scent of blossoming ideas and the world was cloaked in a veil of wonder, I, Connor, did find myself seated within the venerable walls of Web Communications. The chamber was aglow with the soft light of candles, their flames dancing to the silent music of thought. Around me gathered were my esteemed companions: Tim, whose intellect shone brighter than the morning star; Douglas, a sage whose wisdom flowed like a deep river; Luke, ever the jovial spirit whose laughter could stir even the sternest soul; Liam, a seeker of truths hidden beneath layers of enigma; Cameron, a weaver of tales spun from the finest threads of imagination; and Chase, whose adventurous heart knew no boundaries.</p> 
 								<p>We were engrossed in profound discourse, delving into the mysteries of the cosmos and the intricate tapestries of the human spirit. The quills in our hands moved swiftly across parchment, capturing fleeting thoughts before they could escape into the ether. The aroma of fresh ink mingled with the scent of aged wood, creating an atmosphere ripe for enlightenment.</p> 
 								<p>As the sun cast its golden rays through the stained-glass windows, painting our surroundings with hues of sapphire and crimson, the grand oaken door creaked open. All heads turned in unison to witness the entrance of Thomas. There was a certain gravity in his step, a portentous air that clung to him like a shadow.</p> <p>"Greetings, noble friends," he intoned, his voice echoing softly against the stone walls.</p> <p>"Well met, Thomas," replied Tim, his eyes gleaming with curiosity. "What tidings dost thou bring to our humble assembly?"</p> 
 								<p>Thomas hesitated, his gaze distant as though he grappled with the enormity of the tale he bore. "I come bearing news most extraordinary, a narrative that challenges the very fabric of our understanding."</p> 
@@ -95,8 +98,6 @@
 							<li>&copy; Thomas The Man</li><li>Design: Buster Brown</li>
 						</ul>
 					</footer>
-
-
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -105,12 +106,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/rainsound.js"></script>
 			<script src="assets/js/lightning.js"></script>
+			<script src="assets/js/rain.js"></script>
+			
 	</body>
-	<script>
-
-$(document).ready(function() {
-  makeItRain();
-});
-	</script>
 </html>
