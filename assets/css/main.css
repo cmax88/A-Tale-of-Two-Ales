@@ -3507,6 +3507,15 @@ input, select, textarea {
 				right: 0;
 			}
 
+			#banner h2:hover {
+				transition: 1s;
+				color: #fff;
+				text-shadow: 0 0 5px #f1e7b7,
+							0 0 25px #f1e7b7,
+							0 0 50px #f1e7b7,
+							0 0 100px #f1e7b7;
+			}
+
 		#banner p {
 			letter-spacing: 0.225em;
 			text-transform: uppercase;
@@ -4111,3 +4120,4 @@ body.shake {
 	border-radius: 1vw;
 	padding: 10px;
 }
+
